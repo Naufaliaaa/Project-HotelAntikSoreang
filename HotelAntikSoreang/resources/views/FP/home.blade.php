@@ -1,3 +1,5 @@
+<!-- INI FILE home.blade.php -->
+
 <x-layout>
     {{-- HERO --}}
     <section class="relative h-screen bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1501117716987-c8e1ecb210b0');">
