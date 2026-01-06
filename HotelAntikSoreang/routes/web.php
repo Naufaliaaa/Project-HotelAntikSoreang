@@ -10,6 +10,10 @@ Route::get('/home', function () {
     return view('FP.home');
 });
 
-Route::get('/article', function () {
-    return view('FP.article');
+Route::get('/rooms', function () {
+    return view('FP.rooms');
+});
+
+Route::get('/contact', function () {
+    return view('FP.contact');
 });

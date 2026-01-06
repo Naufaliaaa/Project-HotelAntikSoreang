@@ -1,39 +1,62 @@
 <!DOCTYPE html>
-<html lang="id" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>{{ $title ?? 'Hotel Antik' }}</title>
 
-    <!-- Tailwind CSS CDN (sementara, aman untuk development) -->
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Font -->
-    <link href="https://rsms.me/inter/inter.css" rel="stylesheet">
+    <!-- Google Font (Luxury Look) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Alpine JS (untuk navbar / interaksi kecil) -->
-    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
 
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
+        html {
+            scroll-behavior: smooth;
         }
     </style>
 </head>
 
-<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+<body class="font-sans text-gray-800 bg-white">
 
-    <!-- Navbar -->
+    <!-- NAVBAR -->
     <x-navbar />
 
-    <!-- Content -->
-    <main class="flex-grow pt-20">
+    <!-- PAGE CONTENT -->
+    <main class="pt-20">
         {{ $slot }}
     </main>
 
-    <!-- Footer -->
+    <!-- FOOTER -->
     <x-footer />
+
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            AOS.init({
+                duration: 1000,
+                easing: 'ease-in-out',
+                once: true,
+            });
+        });
+    </script>
 
 </body>
 </html>

@@ -11,7 +11,7 @@
             <!-- Menu Desktop -->
             <ul class="hidden md:flex items-center space-x-10 font-medium">
                 <li>
-                    <a href="/" class="hover:text-indigo-600 transition">Home</a>
+                    <a href="/home" class="hover:text-indigo-600 transition">Home</a>
                 </li>
                 <li>
                     <a href="/rooms" class="hover:text-indigo-600 transition">Rooms</a>
