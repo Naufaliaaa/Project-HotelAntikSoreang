@@ -17,3 +17,7 @@ Route::get('/rooms', function () {
 Route::get('/contact', function () {
     return view('FP.contact');
 });
+
+Route::get('/facilities', function () {
+    return view('FP.facilities');
+});
