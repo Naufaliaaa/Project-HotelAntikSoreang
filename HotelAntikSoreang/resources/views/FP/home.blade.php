@@ -183,9 +183,9 @@
     {{-- HERO SECTION --}}
     <section class="relative h-screen flex items-center justify-center overflow-hidden">
         <img
-            src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=2070"
+            src="{{ asset('img/main-foto.png') }}"
             class="absolute inset-0 w-full h-full object-cover hero-bg"
-            alt="Luxury Hotel"
+            alt="Hotel Antik Luxury"
         >
         <div class="absolute inset-0 gradient-overlay"></div>
 
