@@ -111,13 +111,13 @@
         }
 
         .feature-tag {
-            display: inline-flex;
+            display: flex;
             align-items: center;
-            gap: 6px;
-            padding: 8px 16px;
+            gap: 8px;
+            padding: 8px 14px;
             background: rgba(79, 70, 229, 0.08);
             border-radius: 20px;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 500;
             color: #4f46e5;
             transition: all 0.3s ease;
@@ -126,6 +126,12 @@
         .feature-tag:hover {
             background: rgba(79, 70, 229, 0.15);
             transform: translateX(4px);
+        }
+
+        .feature-icon {
+            width: 16px;
+            height: 16px;
+            flex-shrink: 0;
         }
 
         .book-btn {
@@ -244,14 +250,27 @@
             margin-bottom: 16px;
             letter-spacing: 1px;
         }
+
+        .breakfast-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 16px;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
     </style>
 
     {{-- HERO SECTION --}}
     <section class="relative h-[75vh] flex items-center justify-center overflow-hidden">
         <img
-            src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?q=80&w=2070"
+            src="{{ asset('img/room.jpg') }}"
             class="hero-image absolute inset-0 w-full h-full object-cover"
-            alt="Luxury Rooms"
+            alt="Hotel Rooms"
         >
         <div class="absolute inset-0 bg-gradient-to-br from-black/70 via-black/60 to-black/70"></div>
 
@@ -266,7 +285,7 @@
                 </span>
             </h1>
             <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90 font-light leading-relaxed">
-                Pilih dari koleksi kamar mewah kami, dirancang sempurna untuk kenyamanan dan ketenangan Anda
+                Pilih dari koleksi kamar kami yang dirancang untuk kenyamanan dan ketenangan Anda
             </p>
         </div>
 
@@ -287,107 +306,128 @@
                     Temukan Kamar Ideal Anda
                 </h2>
                 <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-                    Setiap kamar dilengkapi dengan fasilitas modern dan desain interior yang memukau
+                    Setiap kamar dilengkapi dengan fasilitas lengkap untuk kenyamanan maksimal
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
                 @foreach ([
                     [
-                        'title' => 'Deluxe Room',
-                        'price' => 'Rp 1.200.000',
-                        'img' => 'https://images.unsplash.com/photo-1505691938895-1758d7feb511?q=80&w=2070',
-                        'desc' => 'Kamar modern dengan desain elegan dan pemandangan kota yang menakjubkan.',
-                        'features' => ['King Size Bed', 'City View', '35m²', 'Free WiFi', 'Smart TV', 'Mini Bar'],
-                        'delay' => '0'
-                    ],
-                    [
-                        'title' => 'Executive Room',
-                        'price' => 'Rp 1.800.000',
-                        'img' => 'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=2070',
-                        'desc' => 'Pilihan sempurna untuk tamu bisnis dengan fasilitas premium lengkap.',
-                        'features' => ['Queen Bed', 'Work Desk', '45m²', 'Coffee Machine', 'Premium Toiletries', 'Bathtub'],
-                        'delay' => '100'
-                    ],
-                    [
-                        'title' => 'Suite Room',
-                        'price' => 'Rp 2.500.000',
-                        'img' => 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=2070',
-                        'desc' => 'Kemewahan maksimal dengan ruang luas dan interior eksklusif yang memesona.',
-                        'features' => ['Living Area', 'Dining Space', '65m²', 'Jacuzzi', 'Butler Service', 'Premium View'],
-                        'delay' => '200'
-                    ],
-                    [
                         'title' => 'Family Room',
-                        'price' => 'Rp 2.000.000',
-                        'img' => 'https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=2070',
-                        'desc' => 'Ruang nyaman untuk keluarga dengan fasilitas lengkap dan area bermain.',
-                        'features' => ['2 Queen Beds', 'Kids Area', '50m²', 'Family Bathroom', 'Game Console', 'Kitchen'],
+                        'price' => 'Rp 850.000',
+                        'img' => 'familyroom.jpg',
+                        'desc' => 'Kamar luas yang sempurna untuk keluarga dengan fasilitas lengkap dan kenyamanan maksimal.',
+                        'breakfast' => 'Breakfast untuk 4 Orang',
+                        'features' => [
+                            ['icon' => 'M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6', 'text' => 'Twin/Single Bed'],
+                            ['icon' => 'M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z', 'text' => 'Televisi'],
+                            ['icon' => 'M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z', 'text' => 'Water Heater'],
+                            ['icon' => 'M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z', 'text' => 'Bath Tub'],
+                            ['icon' => 'M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12', 'text' => 'Air Conditioner'],
+                            ['icon' => 'M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z', 'text' => 'Meja Rias']
+                        ],
                         'delay' => '0'
                     ],
                     [
-                        'title' => 'Classic Room',
-                        'price' => 'Rp 950.000',
-                        'img' => 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070',
-                        'desc' => 'Sentuhan klasik yang elegan berpadu dengan kenyamanan modern.',
-                        'features' => ['Double Bed', 'Garden View', '30m²', 'Classic Decor', 'Rain Shower', 'Tea Set'],
+                        'title' => 'Deluxe Room',
+                        'price' => 'Rp 425.000',
+                        'img' => 'deluxeroom.jpg',
+                        'desc' => 'Kamar deluxe dengan desain elegan dilengkapi fasilitas modern untuk pengalaman menginap terbaik.',
+                        'breakfast' => 'Breakfast untuk 2 Orang',
+                        'features' => [
+                            ['icon' => 'M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6', 'text' => 'Twin/Single Bed'],
+                            ['icon' => 'M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z', 'text' => 'Televisi'],
+                            ['icon' => 'M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z', 'text' => 'Water Heater'],
+                            ['icon' => 'M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z', 'text' => 'Bath Tub'],
+                            ['icon' => 'M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12', 'text' => 'Air Conditioner']
+                        ],
                         'delay' => '100'
                     ],
                     [
-                        'title' => 'Presidential Suite',
-                        'price' => 'Rp 3.500.000',
-                        'img' => 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=2070',
-                        'desc' => 'Kamar paling eksklusif dengan fasilitas terbaik dan pemandangan spektakuler.',
-                        'features' => ['Master Bedroom', 'Private Terrace', '100m²', 'Spa Bath', 'Wine Cellar', 'Piano'],
+                        'title' => 'Standard Room',
+                        'price' => 'Rp 375.000',
+                        'img' => 'standar-room.jpg',
+                        'desc' => 'Kamar standar dengan fasilitas lengkap yang nyaman dan cocok untuk perjalanan bisnis maupun liburan.',
+                        'breakfast' => 'Breakfast untuk 2 Orang',
+                        'features' => [
+                            ['icon' => 'M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6', 'text' => 'Twin/Single Bed'],
+                            ['icon' => 'M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z', 'text' => 'Televisi'],
+                            ['icon' => 'M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z', 'text' => 'Water Heater'],
+                            ['icon' => 'M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12', 'text' => 'Air Conditioner']
+                        ],
                         'delay' => '200'
+                    ],
+                    [
+                        'title' => 'Budget Room',
+                        'price' => 'Rp 325.000',
+                        'img' => 'budgetroom.jpg',
+                        'desc' => 'Pilihan ekonomis dengan fasilitas lengkap yang tetap memberikan kenyamanan untuk menginap Anda.',
+                        'breakfast' => 'Breakfast untuk 2 Orang',
+                        'features' => [
+                            ['icon' => 'M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6', 'text' => 'Twin/Single Bed'],
+                            ['icon' => 'M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z', 'text' => 'Televisi'],
+                            ['icon' => 'M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z', 'text' => 'Water Heater'],
+                            ['icon' => 'M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12', 'text' => 'Air Conditioner']
+                        ],
+                        'delay' => '300'
                     ],
                 ] as $room)
 
                 <div class="room-card-luxury" data-aos="fade-up" data-aos-delay="{{ $room['delay'] }}">
                     <div class="room-img-container">
                         <img
-                            src="{{ $room['img'] }}"
+                            src="{{ asset('img/' . $room['img']) }}"
                             class="room-img"
                             alt="{{ $room['title'] }}"
                         >
                         <div class="room-overlay"></div>
                         <div class="price-badge">
-                            <div class="text-xs text-gray-500 font-medium">Starting from</div>
+                            <div class="text-xs text-gray-500 font-medium">Mulai dari</div>
                             <div class="text-indigo-600 font-bold text-lg">{{ $room['price'] }}</div>
-                            <div class="text-xs text-gray-400">per night</div>
+                            <div class="text-xs text-gray-400">per malam</div>
                         </div>
                     </div>
 
                     <div class="relative z-10 p-8">
-                        <h3 class="text-2xl font-display font-bold mb-3 text-gray-900">
+                        <h3 class="text-2xl md:text-3xl font-display font-bold mb-2 text-gray-900">
                             {{ $room['title'] }}
                         </h3>
+
+                        <div class="breakfast-badge">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            {{ $room['breakfast'] }}
+                        </div>
 
                         <p class="text-gray-600 text-sm mb-6 leading-relaxed">
                             {{ $room['desc'] }}
                         </p>
 
-                        <div class="flex flex-wrap gap-2 mb-8">
-                            @foreach(array_slice($room['features'], 0, 3) as $feature)
-                            <span class="feature-tag">
-                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                                </svg>
-                                {{ $feature }}
-                            </span>
-                            @endforeach
+                        <div class="mb-6">
+                            <h4 class="text-xs font-bold text-gray-500 mb-3 uppercase tracking-wider">Fasilitas Kamar:</h4>
+                            <div class="grid grid-cols-2 gap-2">
+                                @foreach($room['features'] as $feature)
+                                <div class="feature-tag">
+                                    <svg class="feature-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="{{ $feature['icon'] }}"/>
+                                    </svg>
+                                    <span class="text-xs">{{ $feature['text'] }}</span>
+                                </div>
+                                @endforeach
+                            </div>
                         </div>
 
                         <div class="flex items-center justify-between gap-4">
-                            <a href="/contact" class="detail-btn text-indigo-600 font-semibold hover:underline">
-                                View Details
+                            <a href="/contact" class="detail-btn text-indigo-600 font-semibold hover:underline text-sm">
+                                Lihat Detail
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
                                 </svg>
                             </a>
 
                             <a href="/contact" class="book-btn relative px-6 py-3 rounded-full text-white font-semibold text-sm shadow-lg">
-                                <span class="relative z-10">Book Now</span>
+                                <span class="relative z-10">Pesan Sekarang</span>
                             </a>
                         </div>
                     </div>
@@ -414,14 +454,14 @@
                 Siap Menginap Bersama Kami?
             </h2>
             <p class="text-xl opacity-95 mb-10 leading-relaxed max-w-2xl mx-auto">
-                Pesan kamar favorit Anda sekarang dan dapatkan pengalaman menginap yang tak terlupakan dengan penawaran spesial
+                Pesan kamar favorit Anda sekarang dan dapatkan pengalaman menginap yang tak terlupakan
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="/contact" class="book-btn relative inline-block px-10 py-4 bg-white text-indigo-600 rounded-full font-bold text-lg shadow-2xl">
-                    <span class="relative z-10">Reserve Your Room</span>
+                    <span class="relative z-10">Reservasi Sekarang</span>
                 </a>
                 <a href="/facilities" class="inline-block px-10 py-4 rounded-full border-2 border-white font-semibold text-lg hover:bg-white hover:text-indigo-600 transition">
-                    Explore Facilities
+                    Lihat Fasilitas
                 </a>
             </div>
         </div>
