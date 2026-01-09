@@ -42,15 +42,52 @@
             transform: translateY(-5px);
         }
 
+        .form-group {
+            position: relative;
+            margin-bottom: 24px;
+        }
+
         .form-input {
-            transition: all 0.3s ease;
+            width: 100%;
+            padding: 16px 16px 16px 56px;
             border: 2px solid #e5e7eb;
+            border-radius: 16px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            outline: none;
         }
 
         .form-input:focus {
             border-color: #4f46e5;
             box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
             transform: translateY(-2px);
+        }
+
+        .form-icon {
+            position: absolute;
+            left: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            color: #9ca3af;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .form-input:focus + .form-icon {
+            color: #4f46e5;
+        }
+
+        textarea.form-input {
+            padding-top: 20px;
+            resize: none;
+            min-height: 120px;
+        }
+
+        textarea.form-input + .form-icon {
+            top: 24px;
+            transform: translateY(0);
         }
 
         .submit-btn {
@@ -107,6 +144,7 @@
             justify-content: center;
             transition: all 0.4s ease;
             box-shadow: 0 8px 20px rgba(79, 70, 229, 0.3);
+            flex-shrink: 0;
         }
 
         .info-card:hover .contact-icon {
@@ -118,7 +156,7 @@
             border-radius: 30px;
             overflow: hidden;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
-            height: 450px;
+            height: 500px;
             position: relative;
             transition: all 0.4s ease;
         }
@@ -153,16 +191,6 @@
             color: #4f46e5;
             margin-bottom: 16px;
             letter-spacing: 1px;
-        }
-
-        .floating-label {
-            transition: all 0.3s ease;
-        }
-
-        .form-input:focus + .floating-label,
-        .form-input:not(:placeholder-shown) + .floating-label {
-            transform: translateY(-28px) scale(0.85);
-            color: #4f46e5;
         }
 
         @keyframes pulse {
@@ -203,7 +231,7 @@
     {{-- HERO SECTION --}}
     <section class="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <img
-            src="https://images.unsplash.com/photo-1521782462922-9318be1cfd04?q=80&w=2070"
+            src="{{ asset('img/contact-foto.jpg') }}"
             alt="Contact Hotel"
             class="hero-bg-contact absolute inset-0 w-full h-full object-cover"
         >
@@ -242,61 +270,52 @@
                         </p>
                     </div>
 
-                    <form class="form-container p-10 space-y-6">
-                        <div class="relative">
+                    <form class="form-container p-10">
+                        <div class="form-group">
                             <input
                                 type="text"
                                 placeholder="Masukkan nama lengkap"
-                                class="form-input w-full px-6 py-4 rounded-2xl outline-none text-gray-900 placeholder-gray-400"
+                                class="form-input"
                                 required
                             >
-                            <label class="absolute left-6 top-4 text-gray-500 pointer-events-none">
-                                <svg class="w-5 h-5 inline mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
-                                </svg>
-                            </label>
+                            <svg class="form-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                            </svg>
                         </div>
 
-                        <div class="relative">
+                        <div class="form-group">
                             <input
                                 type="email"
                                 placeholder="email@example.com"
-                                class="form-input w-full px-6 py-4 rounded-2xl outline-none text-gray-900 placeholder-gray-400"
+                                class="form-input"
                                 required
                             >
-                            <label class="absolute left-6 top-4 text-gray-500 pointer-events-none">
-                                <svg class="w-5 h-5 inline mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                                </svg>
-                            </label>
+                            <svg class="form-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
                         </div>
 
-                        <div class="relative">
+                        <div class="form-group">
                             <input
                                 type="tel"
                                 placeholder="+62 xxxx xxxx xxxx"
-                                class="form-input w-full px-6 py-4 rounded-2xl outline-none text-gray-900 placeholder-gray-400"
+                                class="form-input"
                                 required
                             >
-                            <label class="absolute left-6 top-4 text-gray-500 pointer-events-none">
-                                <svg class="w-5 h-5 inline mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-                                </svg>
-                            </label>
+                            <svg class="form-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                            </svg>
                         </div>
 
-                        <div class="relative">
+                        <div class="form-group">
                             <textarea
-                                rows="5"
                                 placeholder="Tuliskan pesan Anda di sini..."
-                                class="form-input w-full px-6 py-4 rounded-2xl outline-none text-gray-900 placeholder-gray-400 resize-none"
+                                class="form-input"
                                 required
                             ></textarea>
-                            <label class="absolute left-6 top-4 text-gray-500 pointer-events-none">
-                                <svg class="w-5 h-5 inline mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"/>
-                                </svg>
-                            </label>
+                            <svg class="form-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"/>
+                            </svg>
                         </div>
 
                         <button
@@ -311,7 +330,7 @@
                             </span>
                         </button>
 
-                        <p class="text-center text-sm text-gray-500 mt-4">
+                        <p class="text-center text-sm text-gray-500 mt-6">
                             Atau hubungi kami langsung melalui WhatsApp atau Email
                         </p>
                     </form>
@@ -330,7 +349,7 @@
                         <div class="space-y-4">
                             <div class="info-card">
                                 <div class="flex items-start gap-4">
-                                    <div class="contact-icon flex-shrink-0">
+                                    <div class="contact-icon">
                                         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
@@ -345,7 +364,7 @@
 
                             <div class="info-card">
                                 <div class="flex items-start gap-4">
-                                    <div class="contact-icon flex-shrink-0">
+                                    <div class="contact-icon">
                                         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
                                         </svg>
@@ -360,7 +379,7 @@
 
                             <div class="info-card">
                                 <div class="flex items-start gap-4">
-                                    <div class="contact-icon flex-shrink-0">
+                                    <div class="contact-icon">
                                         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                                         </svg>
@@ -375,7 +394,7 @@
 
                             <div class="info-card">
                                 <div class="flex items-start gap-4">
-                                    <div class="contact-icon flex-shrink-0">
+                                    <div class="contact-icon">
                                         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
                                         </svg>
@@ -396,18 +415,18 @@
                         <div class="mt-8">
                             <h4 class="font-bold text-gray-900 mb-4">Follow Us</h4>
                             <div class="flex gap-3">
-                                <a href="#" class="social-link">
+                                <a href="#" class="social-link" title="WhatsApp">
                                     <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M24 4.6c-.9.4-1.8.7-2.8.8 1-.6 1.8-1.6 2.2-2.7-1 .6-2 1-3.1 1.2-.9-1-2.2-1.6-3.6-1.6-2.7 0-4.9 2.2-4.9 4.9 0 .4 0 .8.1 1.1C7.7 8.1 4.1 6.1 1.7 3.1c-.4.7-.6 1.6-.6 2.5 0 1.7.9 3.2 2.2 4.1-.8 0-1.6-.2-2.2-.6v.1c0 2.4 1.7 4.4 3.9 4.8-.4.1-.8.2-1.3.2-.3 0-.6 0-.9-.1.6 2 2.4 3.4 4.6 3.4-1.7 1.3-3.8 2.1-6.1 2.1-.4 0-.8 0-1.2-.1 2.2 1.4 4.8 2.2 7.5 2.2 9.1 0 14-7.5 14-14v-.6c1-.7 1.8-1.6 2.5-2.5z"/>
+                                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
                                     </svg>
                                 </a>
-                                <a href="#" class="social-link">
+                                <a href="#" class="social-link" title="Instagram">
                                     <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
                                         <path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2-.1-1.3-.1-1.6-.1-4.8s0-3.6.1-4.8c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.2-.1 1.6-.1 4.8-.1M12 0C8.7 0 8.3 0 7.1.1 5.8.1 4.9.3 4.1.6c-.8.3-1.5.7-2.2 1.4C1.3 2.6.9 3.3.6 4.1.3 4.9.1 5.8.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.1 1.3.3 2.1.6 2.9.3.8.7 1.5 1.4 2.2.7.7 1.4 1.1 2.2 1.4.8.3 1.7.5 2.9.6 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c1.3-.1 2.1-.3 2.9-.6.8-.3 1.5-.7 2.2-1.4.7-.7 1.1-1.4 1.4-2.2.3-.8.5-1.7.6-2.9.1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.1-1.3-.3-2.1-.6-2.9-.3-.8-.7-1.5-1.4-2.2-.7-.7-1.4-1.1-2.2-1.4-.8-.3-1.7-.5-2.9-.6C15.7 0 15.3 0 12 0z"/>
                                         <path d="M12 5.8c-3.4 0-6.2 2.8-6.2 6.2s2.8 6.2 6.2 6.2 6.2-2.8 6.2-6.2-2.8-6.2-6.2-6.2zm0 10.2c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4zM18.4 4.2c-.8 0-1.4.6-1.4 1.4s.6 1.4 1.4 1.4 1.4-.6 1.4-1.4-.6-1.4-1.4-1.4z"/>
                                     </svg>
                                 </a>
-                                <a href="#" class="social-link">
+                                <a href="#" class="social-link" title="Facebook">
                                     <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
                                         <path d="M22.7 0H1.3C.6 0 0 .6 0 1.3v21.4c0 .7.6 1.3 1.3 1.3h11.5v-9.3H9.7v-3.6h3.1V8.4c0-3.1 1.9-4.8 4.7-4.8 1.3 0 2.5.1 2.8.1v3.3h-1.9c-1.5 0-1.8.7-1.8 1.8v2.3h3.6l-.5 3.6h-3.1V24h6.1c.7 0 1.3-.6 1.3-1.3V1.3c0-.7-.6-1.3-1.3-1.3z"/>
                                     </svg>
@@ -415,23 +434,31 @@
                             </div>
                         </div>
                     </div>
-
-                    {{-- Google Maps --}}
-                    <div>
-                        <h3 class="text-2xl font-display font-bold mb-4 text-gray-900">
-                            Lokasi Kami
-                        </h3>
-                        <div class="map-container">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.898499618324!2d107.5193051823203!3d-7.021216050662453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68edd3402b05df%3A0x43d6c885e1a8a086!2sHotel%20Antik%20soreang!5e0!3m2!1sid!2sid!4v1767719653460!5m2!1sid!2sid"
-                                allowfullscreen=""
-                                loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade">
-                            </iframe>
-                        </div>
-                    </div>
                 </div>
 
+            </div>
+        </div>
+    </section>
+
+    {{-- GOOGLE MAPS FULL WIDTH --}}
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <span class="section-badge">FIND US</span>
+                <h3 class="text-3xl md:text-4xl font-display font-bold text-gray-900">
+                    Lokasi Kami
+                </h3>
+                <p class="text-gray-600 mt-4">
+                    Kunjungi kami di Hotel Antik Soreang, Bandung
+                </p>
+            </div>
+            <div class="map-container" data-aos="fade-up" data-aos-delay="200">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.898499618324!2d107.5193051823203!3d-7.021216050662453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68edd3402b05df%3A0x43d6c885e1a8a086!2sHotel%20Antik%20soreang!5e0!3m2!1sid!2sid!4v1767719653460!5m2!1sid!2sid"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
             </div>
         </div>
     </section>
