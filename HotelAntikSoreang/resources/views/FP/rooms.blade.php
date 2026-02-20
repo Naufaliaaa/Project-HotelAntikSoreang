@@ -454,7 +454,7 @@
                 Siap Menginap Bersama Kami?
             </h2>
             <p class="text-xl opacity-95 mb-10 leading-relaxed max-w-2xl mx-auto">
-                Pesan kamar favorit Anda sekarang dan dapatkan pengalaman menginap yang tak terlupakan
+                Pesan Kamar Favorit Anda sekarang dan dapatkan pengalaman menginap yang tak terlupakan
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="/contact" class="book-btn relative inline-block px-10 py-4 bg-white text-indigo-600 rounded-full font-bold text-lg shadow-2xl">
