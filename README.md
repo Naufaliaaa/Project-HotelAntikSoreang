@@ -120,6 +120,7 @@ php artisan serve
 - **Email**: info@hotelantik.com
 - **Jam Operasional**: Buka 24 Jam
 
+ini di buat oleh Team Media Cikalong
 ---
 
 <p align="center">Made with ❤️ using Laravel & Tailwind CSS</p>
