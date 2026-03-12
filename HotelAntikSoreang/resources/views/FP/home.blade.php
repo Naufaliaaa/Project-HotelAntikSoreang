@@ -416,7 +416,7 @@
                 Siap Memulai Pengalaman Mewah Anda?
             </h2>
             <p class="text-xl mb-10 opacity-95 leading-relaxed">
-                Pesan Kamar Favorit Anda Sekarang dan Rasakan Kemewahan Yang tak terlupakan
+                Pesan Kamar Favorit Anda Sekarang dan Rasakan Kemewahan Yang Tak Terlupakan
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="/rooms" class="cta-button relative px-10 py-4 bg-white text-indigo-600 rounded-full font-bold text-lg shadow-2xl">
