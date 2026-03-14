@@ -306,7 +306,7 @@
                     Temukan Kamar Ideal Anda
                 </h2>
                 <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-                    Setiap Kamar Dilengkapi Dengan Fasilitas lengkap untuk kenyamanan maksimal
+                    Setiap Kamar Dilengkapi Dengan Fasilitas Lengkap Untuk Kenyamanan Maksimal
                 </p>
             </div>
 
