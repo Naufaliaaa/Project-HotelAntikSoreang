@@ -14,9 +14,8 @@ Route::get('/rooms', function () {
     return view('FP.rooms');
 });
 
-Route::get('/contact', function () {
-    return view('FP.contact');
-});
+Route::get('/contact', [App\Http\Controllers\ContactController::class, 'show']);
+Route::post('/contact', [App\Http\Controllers\ContactController::class, 'store'])->name('contact.store');
 
 Route::get('/facilities', function () {
     return view('FP.facilities');
