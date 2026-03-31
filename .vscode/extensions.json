@@ -1,0 +1,12 @@
+{
+    "recommendations": [
+        "bmewburn.vscode-intelephense-client",
+        "onecentlin.laravel-blade",
+        "onecentlin.laravel-extension-pack",
+        "bradlc.vscode-tailwindcss",
+        "tailwindLabs.tailwind-css-intellisense",
+        "shufo.vscode-blade-formatter",
+        "ryannaddy.laravel-artisan",
+        "felixfbecker.php-debug"
+    ]
+}

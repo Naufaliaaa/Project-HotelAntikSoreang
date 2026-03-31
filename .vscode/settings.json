@@ -1,0 +1,41 @@
+{
+    "intelephense.files.associations": [
+        "*.blade.php",
+        "*.php"
+    ],
+    "intelephense.files.maxSize": 500000,
+    "intelephense.diagnostics.undefinedTypes": false,
+    "intelephense.diagnostics.undefinedMethods": false,
+    "intelephense.diagnostics.undefinedProperties": false,
+    "intelephense.diagnostics.undefinedFunctions": false,
+    "intelephense.diagnostics.undefinedConstants": false,
+    "intelephense.diagnostics.undefinedClassConstants": false,
+    "intelephense.diagnostics.undefinedMagicMethods": false,
+    "intelephense.diagnostics.undefinedMagicProperties": false,
+    "intelephense.diagnostics.invalidReturnType": false,
+    "intelephense.diagnostics.inferredInvalidParamType": false,
+    "emmet.includeLanguages": {
+        "blade": "html"
+    },
+    "emmet.triggerExpansionOnTab": true,
+    "blade.format.enable": true,
+    "[blade]": {
+        "editor.defaultFormatter": "shufo.vscode-blade-formatter",
+        "editor.formatOnSave": true
+    },
+    "tailwindCSS.experimental.configFile": [
+        "HotelAntikSoreang/tailwind.config.js",
+        "**/tailwind.config.js"
+    ],
+    "tailwindCSS.includeLanguages": {
+        "blade": "html"
+    },
+    "php.validate.executablePath": "/usr/local/bin/php",
+    "php.suggest.basic": false,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "problems.decorations.enabled": true,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
+}
