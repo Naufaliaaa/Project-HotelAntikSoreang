@@ -1,127 +1,102 @@
-# 🏨 Hotel Antik Soreang
+# 🏨✨ Hotel Antik Soreang - Premium Hotel Booking
 
-Website reservasi hotel modern berbasis Laravel & Tailwind CSS yang menghadirkan pengalaman pemesanan kamar hotel yang elegan dan responsif.
+[![Laravel](https://img.shields.io/badge/Laravel-12-ff4444?style=flat&logo=laravel)](https://laravel.com)
+[![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.4-38bdf8?style=flat&logo=tailwindcss)](https://tailwindcss.com)
+[![Vite](https://img.shields.io/badge/Vite-5.0-646cf7?style=flat&logo=vite)](https://vitejs.dev)
 
-## 📝 Deskripsi
+Modern, responsive hotel reservation website built with Laravel 12, Tailwind CSS, and Vite. Elegant design with smooth animations and full booking features.
 
-**Hotel Antik Soreang** adalah website hotel modern yang terletak di Soreang, Bandung, Jawa Barat. Website ini menyediakan sistem pemesanan kamar hotel secara online dengan tampilan yang mewah dan profesional. Dibangun menggunakan teknologi modern, website ini menawarkan pengalaman pengguna yang smooth dan elegan.
+## 🚀 Quick Start
 
-### Fitur Utama
-
-- **Home Page** - Halaman utama dengan tampilan hero yang menawan, sekilas tentang hotel, preview kamar, fasilitas, dan testimonial tamu
-- **Rooms** - Halaman komprehensif menampilkan semua tipe kamar yang tersedia dengan harga dan fasilitas lengkap
-- **Facilities** - Halaman fasilitas hotel seperti kolam renang infinity, restoran fine dining, spa luxury, dan fitness center
-- **Contact** - Halaman kontak dengan formulir pesan dan informasi lokasi hotel
-
-## 🛏️ Tipe Kamar
-
-| Kamar | Harga | Fasilitas |
-|-------|-------|-----------|
-| **Family Room** | Rp 850.000/malam | Twin/Single Bed, TV, Water Heater, Bath Tub, AC, Meja Rias |
-| **Deluxe Room** | Rp 425.000/malam | Twin/Single Bed, TV, Water Heater, Bath Tub, AC |
-| **Standard Room** | Rp 375.000/malam | Twin/Single Bed, TV, Water Heater, AC |
-| **Budget Room** | Rp 325.000/malam | Twin/Single Bed, TV, Water Heater, AC |
-
-> 💡 Semua kamar sudah termasuk sarapan pagi (breakfast)
-
-## 🏊 Fasilitas Hotel
-
-- **Infinity Swimming Pool** - Kolam renang infinity dengan pemandangan kota
-- **Fine Dining Restaurant** - Restoran mewah dengan menu internasional
-- **Luxury Spa & Wellness** - Spa dan perawatan tubuh premium
-- **Modern Fitness Center** - Gym modern dengan peralatan terkini
-- **Valet Parking** - Layanan valet gratis
-- **Airport Transfer** - Layanan antar-jemput bandara
-- **High-Speed WiFi** - Internet gratis di seluruh area hotel
-- **Business Center** - Pusat bisnis 24/7
-- **Kids Club** - Area bermain anak
-- **Café & Lounge** - Bar kopi premium
-
-## 🚀 Tech Stack
-
-- **Laravel 12** - Framework PHP modern
-- **PHP 8.4** - Versi PHP terbaru
-- **Tailwind CSS** - Framework CSS utility-first
-- **Vite** - Build tool modern
-- **MySQL** - Database
-
-## 📁 Struktur Folder
-
-```
-HotelAntikSoreang/
-├── app/
-│   ├── Http/Controllers/    # Controller untuk logika aplikasi
-│   ├── Models/              # Model database
-│   ├── Providers/           # Service providers
-│   └── View/Components/     # Blade components
-├── public/
-│   └── img/                 # Gambar dan aset statis
-├── resources/
-│   ├── css/                 # File CSS (Tailwind)
-│   ├── js/                  # File JavaScript
-│   └── views/               # Blade templates
-│       ├── FP/              # Halaman Front Page
-│       │   ├── home.blade.php
-│       │   ├── rooms.blade.php
-│       │   ├── facilities.blade.php
-│       │   └── contact.blade.php
-│       └── components/      # Komponen reusable
-├── routes/
-│   └── web.php              # Definisi routes
-└── storage/                 # File storage dan log
-```
-
-## ⚙️ Installation
-
-```bash
-# Clone repository
-git clone https://github.com/username/hotel-antik-soreang.git
-cd hotel-antik-soreang
-
-# Install dependencies
+\`\`\`bash
+git clone <repo>
+cd HotelAntikSoreang
 composer install
 npm install
-
-# Setup environment
 cp .env.example .env
 php artisan key:generate
-
-# Setup database
 php artisan migrate
-
-# Running development server
 npm run dev
 php artisan serve
-```
+\`\`\`
+
+Visit \`http://localhost:8000\`
+
+## ✨ Key Features
+
+- ✅ Responsive design (Mobile-first)
+- 🛏️ Room gallery with pricing & features
+- 🏊 Facilities showcase (pool, spa, gym)
+- 📧 Contact form with email notifications
+- 🎨 Modern UI with gradients & hover animations
+- ⚡ Fast loading with Vite HMR
+
+## 📱 Pages
+
+| Page | URL | Description |
+|------|-----|-------------|
+| Home | /home | Hero banner + previews |
+| Rooms | /rooms | 4 room types with details |
+| Facilities | /facilities | Hotel amenities |
+| Contact | /contact | Inquiry form + info |
+
+## 🛏️ Rooms & Pricing
+
+| Room Type | Price per Night | Key Features |
+|-----------|-----------------|--------------|
+| **Family Room** | Rp 850.000 | Twin beds, bathtub, AC |
+| **Deluxe Room** | Rp 425.000 | King bed, TV, heater |
+| **Standard Room** | Rp 375.000 | Comfort bed, AC |
+| **Budget Room** | Rp 325.000 | Basic + clean |
+
+*Breakfast included*
+
+## 🏗️ Tech Stack
+
+| Frontend | Backend | Tools |
+|----------|---------|-------|
+| Tailwind CSS | Laravel 12 | Vite 5 |
+| Alpine.js | PHP 8.4 | MySQL |
+| Heroicons | Eloquent ORM | Mail |
+
+## 📸 Screenshots
+
+![Main Home](HotelAntikSoreang/public/img/main-foto.png)
+
+*(Add more screenshots here)*
+
+## 🚀 Deployment
+
+1. Upload to shared hosting/VPS
+2. Set document root to \`public/\`
+3. Configure .env (APP_URL, DB)
+4. \`composer install --optimize-autoloader --no-dev\`
+5. \`npm run build\`
 
 ## 🔗 Routes
 
-| Endpoint | Deskripsi |
-|----------|-----------|
-| `/` | Halaman utama (Welcome) |
-| `/home` | Halaman beranda hotel |
-| `/rooms` | Halaman pilihan kamar |
-| `/facilities` | Halaman fasilitas hotel |
-| `/contact` | Halaman kontak & reservasi |
+```
+GET / - Welcome
+GET /home - Home
+GET /rooms - Rooms
+GET /facilities - Facilities
+POST /contact - Send email
+```
 
-## 📱 Fitur UI/UX
+## 🤝 Contributing
 
-- ✅ Responsive design untuk semua device
-- ✅ Animasi smooth dan transisi elegan
-- ✅ Modern hero section dengan parallax effect
-- ✅ Card design dengan hover effects
-- ✅ Clean dan modern color scheme (Indigo/Purple gradient)
-- ✅ Google Maps integration untuk lokasi hotel
+1. Fork repository
+2. Create feature branch
+3. Submit PR
 
-## 📞 Kontak
+## 📞 Contact Info
 
-- **Alamat**: Hotel Antik Soreang, Bandung, West Java, Indonesia
-- **Telepon**: +62 812 3456 7890
-- **Email**: info@hotelantik.com
-- **Jam Operasional**: Buka 24 Jam
+**Hotel Antik Soreang**  
+Soreang, Bandung, Jawa Barat  
+📞 +62 812 3456 7890  
+✉️ info@hotelantiksoreang.com  
 
-ini di buat oleh Team Media Cikalong
 ---
 
-<p align="center">Made with ❤️ using Laravel & Tailwind CSS</p>
+<p align=\"center\">Updated with ❤️ using modern best practices | 2024</p>
 

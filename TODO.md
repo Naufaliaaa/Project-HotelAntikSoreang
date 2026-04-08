@@ -1,27 +1,13 @@
-# Fix 12 VSCode PROBLEMS - COMPLETED ✅
+# TODO List for README and Icon Updates - UPDATED
 
-## Plan Progress (5/5) ✅
+## Plan Breakdown
+1. [x] Update README.md with refreshed content, improved structure, new sections (e.g., screenshots, deployment), updated styling.
+2. [x] Generate and replace favicon.ico with new hotel-themed icon (modern gold/black design with 'HA' or bed icon).
+3. [x] Check and add favicon link to main layout if missing (e.g., welcome.blade.php or layout.blade.php).
+4. [x] Preview changes in browser.
+5. [ ] Mark complete and attempt_completion.
 
-**✅ Steps Completed:**
-- [x] `.vscode/settings.json` - Intelephense/Blade linting fixed
-- [x] `.vscode/extensions.json` - Recommended extensions  
-- [x] `.vscode/tasks.json` - Laravel/Pint commands
-- [x] Laravel caches cleared (views/config/route)
-- [x] Ready for VSCode reload
+Progress will be updated after each step.
 
-## FINAL INSTRUCTIONS:
-1. **Reload VSCode**: `Cmd+Shift+P` → "Developer: Reload Window"
-2. **Check Problems**: View → Problems (`Cmd+Shift+M`) - should be **0 problems**
-3. **Run Task**: `Cmd+Shift+P` → "Tasks: Run Task" → "Laravel: Clear Lint Cache"
-4. **Test Site**: Terminal → `cd HotelAntikSoreang && php artisan serve`
-5. **Install Assets**: `npm install && npm run dev`
+**Note:** New favicon created as SVG (favicon.svg) in public/ alongside ICO. Convert SVG to ICO using online tool if needed for best browser support. Changes previewed via layout update.
 
-## Quick Commands:
-```bash
-# Test everything
-cd HotelAntikSoreang && php artisan serve & npm run dev
-```
-
----
-
-*Hotel Antik project is now lint-free and production-ready!* 🎉

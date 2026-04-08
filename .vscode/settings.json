@@ -33,7 +33,7 @@
     "php.validate.executablePath": "/usr/local/bin/php",
     "php.suggest.basic": false,
     "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true
+        "source.fixAll.eslint": "explicit"
     },
     "problems.decorations.enabled": true,
     "editor.suggestSelection": "first",
