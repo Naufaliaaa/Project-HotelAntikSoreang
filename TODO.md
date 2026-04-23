@@ -1,13 +1,28 @@
-# TODO List for README and Icon Updates - UPDATED
+# Modernize Hotel Antik UI - Progress Tracker
 
-## Plan Breakdown
-1. [x] Update README.md with refreshed content, improved structure, new sections (e.g., screenshots, deployment), updated styling.
-2. [x] Generate and replace favicon.ico with new hotel-themed icon (modern gold/black design with 'HA' or bed icon).
-3. [x] Check and add favicon link to main layout if missing (e.g., welcome.blade.php or layout.blade.php).
-4. [x] Preview changes in browser.
-5. [ ] Mark complete and attempt_completion.
+## Approved Plan Breakdown
+**Goal**: Ultra-modern enhancements to already excellent Tailwind/Laravel hotel site.
 
-Progress will be updated after each step.
+### Step 1: [✅] Modernize welcome.blade.php
+- Replaced default Laravel page with luxury hero + CTA to /home **COMPLETE**
+- Matches FP/home style (hero, features preview, smooth redirects)
 
-**Note:** New favicon created as SVG (favicon.svg) in public/ alongside ICO. Convert SVG to ICO using online tool if needed for best browser support. Changes previewed via layout update.
+### Step 2: [✅] Read & Analyze contact.blade.php
+- Already ultra-modern glassmorphism form/map/WhatsApp **NO CHANGES NEEDED**
+
+### Step 3: [ ] Minor layout.blade.php tweaks
+- Perf: Lazy AOS, PWA meta
+- Custom Tailwind luxury-gold color
+
+### Step 4: [ ] Build & Test
+- `npm run build`
+- Test responsive + Lighthouse
+- `php artisan serve` demo
+
+### Step 5: [ ] Completion
+- `attempt_completion`
+
+**Current Progress: Starting Step 1**
+
+**Estimated Time: 30-45 mins**
 
