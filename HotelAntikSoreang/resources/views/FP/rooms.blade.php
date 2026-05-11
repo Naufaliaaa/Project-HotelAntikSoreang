@@ -272,7 +272,7 @@
             class="hero-image absolute inset-0 w-full h-full object-cover"
             alt="Hotel Rooms"
         >
-        <div class="absolute inset-0 bg-linear-to-br from-black/70 via-black/60 to-black/70"></div>
+        <div class="absolute inset-0 bg-gradient-to-br from-black/70 via-black/60 to-black/70"></div>
 
         <div class="hero-content relative z-10 text-center text-white px-6 max-w-4xl mx-auto">
             <div class="section-badge bg-white/20 text-white backdrop-blur-sm">
@@ -280,7 +280,7 @@
             </div>
             <h1 class="text-5xl md:text-6xl lg:text-7xl font-display font-bold mb-6 leading-tight">
                 Our Exclusive
-                <span class="block bg-linear-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                <span class="block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                     Rooms & Suites
                 </span>
             </h1>
@@ -298,7 +298,7 @@
     </section>
 
     {{-- ROOMS LIST --}}
-    <section class="py-32 bg-linear-to-br from-gray-50 via-white to-indigo-50/30">
+    <section class="py-32 bg-gradient-to-br from-gray-50 via-white to-indigo-50/30">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="text-center mb-16" data-aos="fade-up">
                 <span class="section-badge">PREMIUM COLLECTION</span>
