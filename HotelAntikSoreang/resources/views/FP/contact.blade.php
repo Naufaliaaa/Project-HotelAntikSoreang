@@ -305,7 +305,7 @@
                                 placeholder="email@example.com"
                                 class="form-input @error('email') border-red-500 @enderror"
                                 value="{{ old('email') }}"
-                                required
+                               g required
                             >
                             @error('email')
                                 <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
