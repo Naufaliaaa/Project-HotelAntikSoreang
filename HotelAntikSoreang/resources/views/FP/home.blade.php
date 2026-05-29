@@ -1,8 +1,8 @@
 <x-layout>
-    <style>
-        /* minimal local style to avoid excessive effects */
+        <style>
+        /* classic (minimal) overlay */
         .hero-overlay {
-            background: linear-gradient(90deg, rgba(15, 23, 42, 0.75) 0%, rgba(79, 70, 229, 0.40) 45%, rgba(0, 0, 0, 0.55) 100%);
+            background: linear-gradient(90deg, rgba(26, 20, 14, 0.80) 0%, rgba(212, 175, 55, 0.18) 45%, rgba(26, 20, 14, 0.70) 100%);
         }
     </style>
 

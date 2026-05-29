@@ -27,7 +27,7 @@
         left: 0;
         width: 0;
         height: 1px;
-        background: linear-gradient(90deg, #818cf8, #c084fc);
+        background: linear-gradient(90deg, #d4af37, #b8860b);
         transition: width 0.3s ease;
     }
 
@@ -37,7 +37,7 @@
 
     .footer-link:hover {
         transform: translateX(4px);
-        color: #c084fc;
+        color: #d4af37;
     }
 
     .social-icon {
@@ -103,12 +103,12 @@
     }
 </style>
 
-<footer class="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-gray-300 mt-32 overflow-hidden">
+<footer class="relative bg-gradient-to-br from-[#1b1a16] via-[#262318] to-[#1b1a16] text-gray-300 mt-32 overflow-hidden">
     <!-- Decorative Elements -->
-    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"></div>
+    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#d4af37] via-[#b8860b] to-[#d4af37]"></div>
     
-    <div class="absolute top-20 right-0 w-96 h-96 bg-indigo-600/10 rounded-full blur-3xl"></div>
-    <div class="absolute bottom-0 left-0 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl"></div>
+    <div class="absolute top-20 right-0 w-96 h-96 bg-[#d4af37]/10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 w-96 h-96 bg-[#b8860b]/10 rounded-full blur-3xl"></div>
 
     <div class="relative max-w-7xl mx-auto px-6 lg:px-8 py-20">
         <!-- Main Footer Content -->
@@ -116,7 +116,7 @@
             <!-- Brand Column -->
             <div class="footer-animate lg:col-span-1">
                 <div class="flex items-center space-x-3 mb-6">
-                    <div class="w-12 h-12 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-xl flex items-center justify-center shadow-lg">
+                    <div class="w-12 h-12 bg-gradient-to-br from-[#d4af37] to-[#b8860b] rounded-xl flex items-center justify-center shadow-lg">
                         <span class="text-white font-bold text-2xl">A</span>
                     </div>
                     <div class="flex flex-col -space-y-1">
@@ -179,7 +179,7 @@
                 </h4>
                 <ul class="space-y-4">
                     <li class="contact-item flex items-start space-x-3">
-                        <svg class="w-5 h-5 text-indigo-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-5 h-5 text-[#d4af37] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
                         </svg>

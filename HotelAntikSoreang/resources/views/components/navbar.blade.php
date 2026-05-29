@@ -26,7 +26,7 @@
         left: 50%;
         width: 0;
         height: 2px;
-        background: linear-gradient(90deg, #4f46e5, #7c3aed);
+        background: linear-gradient(90deg, #d4af37, #b8860b);
         transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         transform: translateX(-50%);
     }
@@ -119,11 +119,11 @@
         <div class="flex justify-between items-center h-20">
             <!-- Logo -->
             <a href="/" class="flex items-center space-x-3 nav-logo">
-                <div class="w-10 h-10 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-lg flex items-center justify-center">
+                <div class="w-10 h-10 bg-gradient-to-br from-[#d4af37] to-[#b8860b] rounded-lg flex items-center justify-center">
                     <span class="text-white font-bold text-xl">A</span>
                 </div>
                 <div class="flex flex-col -space-y-1">
-                    <span class="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">ANTIK</span>
+                    <span class="text-2xl font-bold bg-gradient-to-r from-[#d4af37] to-[#b8860b] bg-clip-text text-transparent">ANTIK</span>
                     <span class="text-[10px] tracking-[0.3em] text-gray-500 uppercase">Luxury Hotel</span>
                 </div>
             </a>
@@ -154,7 +154,7 @@
 
             <!-- CTA Button -->
             <div class="hidden lg:block">
-                <a href="/rooms" class="book-btn relative px-8 py-3 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold tracking-wide shadow-lg">
+                <a href="/rooms" class="book-btn relative px-8 py-3 rounded-lg bg-gradient-to-r from-[#b8860b] to-[#d4af37] text-[#1a1a1a] font-semibold tracking-wide shadow-lg">
                     <span class="relative z-10">Book Now</span>
                 </a>
             </div>
@@ -182,29 +182,29 @@
             
             <ul class="flex-1 px-6 py-8 space-y-2">
                 <li>
-                    <a href="/home" class="block py-4 px-6 text-lg font-medium text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 rounded-xl transition">
+                <a href="/home" class="block py-4 px-6 text-lg font-medium text-gray-700 hover:bg-[#d4af37]/10 hover:text-[#b8860b] rounded-xl transition">
                         Home
                     </a>
                 </li>
                 <li>
-                    <a href="/rooms" class="block py-4 px-6 text-lg font-medium text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 rounded-xl transition">
+                <a href="/rooms" class="block py-4 px-6 text-lg font-medium text-gray-700 hover:bg-[#d4af37]/10 hover:text-[#b8860b] rounded-xl transition">
                         Rooms
                     </a>
                 </li>
                 <li>
-                    <a href="/facilities" class="block py-4 px-6 text-lg font-medium text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 rounded-xl transition">
+                <a href="/facilities" class="block py-4 px-6 text-lg font-medium text-gray-700 hover:bg-[#d4af37]/10 hover:text-[#b8860b] rounded-xl transition">
                         Facilities
                     </a>
                 </li>
                 <li>
-                    <a href="/contact" class="block py-4 px-6 text-lg font-medium text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 rounded-xl transition">
+                <a href="/contact" class="block py-4 px-6 text-lg font-medium text-gray-700 hover:bg-[#d4af37]/10 hover:text-[#b8860b] rounded-xl transition">
                         Contact
                     </a>
                 </li>
             </ul>
 
             <div class="px-6 pb-8">
-                <a href="/rooms" class="block text-center px-8 py-4 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold shadow-lg">
+                <a href="/rooms" class="block text-center px-8 py-4 rounded-lg bg-gradient-to-r from-[#b8860b] to-[#d4af37] text-[#1a1a1a] font-semibold shadow-lg">
                     Book Now
                 </a>
             </div>
